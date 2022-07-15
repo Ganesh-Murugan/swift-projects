@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z71-Ox-ipR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Table View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsTableViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-No-plY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsTableViewCellIdentifier" id="JFt-w6-R8b" customClass="NewsTableViewCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="722.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JFt-w6-R8b" id="5kx-Uv-0BY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="722.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="toI-JD-4oj">
+                                                    <rect key="frame" x="10" y="10" width="399" height="707.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7cZ-1F-8RA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="158" height="707.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izA-KV-UBU">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="17"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Source">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="17" name="Courier-Bold"/>
+                                                                                <font key="NSOriginalFont" size="17" name="Palatino-Bold"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqU-ic-b43">
+                                                                    <rect key="frame" x="0.0" y="17" width="158" height="19.5"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="title">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="17" name="CourierNewPS-BoldMT"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-kt-lY3">
+                                                                    <rect key="frame" x="0.0" y="36.5" width="158" height="14"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="      ">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="14" name="Courier"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                        <fragment content="Description">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="14" name="Courier"/>
+                                                                                <font key="NSOriginalFont" size="14" name="Courier"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCs-h8-rfM">
+                                                                    <rect key="frame" x="0.0" y="50.5" width="158" height="657"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uFB-cB-z3M">
+                                                            <rect key="frame" x="279" y="0.0" width="120" height="707.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ohw-FG-HQD">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="80" id="TGn-vS-4Av"/>
+                                                                        <constraint firstAttribute="width" constant="120" id="csq-d8-ZsR"/>
+                                                                    </constraints>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mon-IE-A2l">
+                                                                    <rect key="frame" x="0.0" y="80" width="120" height="627.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="toI-JD-4oj" firstAttribute="leading" secondItem="5kx-Uv-0BY" secondAttribute="leading" constant="10" id="1H6-hf-RZD"/>
+                                                <constraint firstAttribute="bottom" secondItem="toI-JD-4oj" secondAttribute="bottom" constant="5" id="47w-O6-TBa"/>
+                                                <constraint firstAttribute="trailing" secondItem="toI-JD-4oj" secondAttribute="trailing" constant="5" id="Lad-Ix-dTx"/>
+                                                <constraint firstItem="toI-JD-4oj" firstAttribute="top" secondItem="5kx-Uv-0BY" secondAttribute="top" constant="10" id="Yig-Hh-ObL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsDescription" destination="FgQ-kt-lY3" id="MDT-JL-Goq"/>
+                                            <outlet property="newsImage" destination="ohw-FG-HQD" id="90C-NV-ks6"/>
+                                            <outlet property="source" destination="izA-KV-UBU" id="Y2B-wW-k5a"/>
+                                            <outlet property="title" destination="OqU-ic-b43" id="E0l-dB-EHZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nj6-No-plY" secondAttribute="bottom" id="6oj-6A-hOY"/>
+                            <constraint firstItem="Nj6-No-plY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A09-iC-pTX"/>
+                            <constraint firstItem="Nj6-No-plY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SNs-Ew-Ssa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nj6-No-plY" secondAttribute="trailing" id="vVj-bF-TzY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BpB-Zd-Iys"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="Nj6-No-plY" id="mB0-Uz-SCL"/>
+                        <segue destination="0Tq-nY-dx1" kind="show" identifier="newsToArticleSegueIdentifier" id="dpj-r1-RlS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589.85507246376812" y="125.89285714285714"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="2af-N2-1Ag">
+            <objects>
+                <viewController storyboardIdentifier="articleViewController" id="AsL-0p-bqR" customClass="ArticleViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6B-Kv-Jtl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k0R-gI-cvg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="9f8-NU-FzE">
+                                    <rect key="frame" x="0.0" y="438" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleTableViewCellIdentifier" id="swG-jf-ukW" customClass="ArticleTableViewCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="382"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="swG-jf-ukW" id="ASP-bu-fsA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="382"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UU1-jb-Oee">
+                                                    <rect key="frame" x="5" y="0.0" width="404" height="382"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-H1-a9y">
+                                                            <rect key="frame" x="0.0" y="0.0" width="404" height="20"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="source">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="20" name="Courier-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4vb-IN-LK7">
+                                                            <rect key="frame" x="0.0" y="20" width="404" height="19"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrk-3N-LVh">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="19"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="author">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="16" name="Monaco"/>
+                                                                                <font key="NSOriginalFont" size="16" name="Monaco"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Br-3N-ckm">
+                                                                    <rect key="frame" x="207" y="0.0" width="197" height="19"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="publishedAt">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="16" name="Monaco"/>
+                                                                                <font key="NSOriginalFont" size="16" name="Monaco"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="center" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6W4-RO-xJF">
+                                                            <rect key="frame" x="0.0" y="39" width="404" height="300.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-6h-2Lo">
+                                                                    <rect key="frame" x="0.0" y="0.5" width="404" height="300"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="404" id="DZw-A4-BsG"/>
+                                                                        <constraint firstAttribute="height" constant="300" id="iSi-yh-pkK"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sle-d3-6Ca">
+                                                            <rect key="frame" x="0.0" y="339.5" width="404" height="20"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Title">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="20" name="Courier-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="20" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-lt-vda">
+                                                            <rect key="frame" x="0.0" y="359.5" width="404" height="22.5"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="description">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="19" name="Monaco"/>
+                                                                        <font key="NSOriginalFont" size="15" name="Courier-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="5" paragraphSpacingBefore="1" firstLineHeadIndent="100" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UU1-jb-Oee" firstAttribute="leading" secondItem="ASP-bu-fsA" secondAttribute="leading" constant="5" id="3rQ-hd-8ws"/>
+                                                <constraint firstAttribute="trailing" secondItem="UU1-jb-Oee" secondAttribute="trailing" constant="5" id="R76-lI-51A"/>
+                                                <constraint firstAttribute="bottom" secondItem="UU1-jb-Oee" secondAttribute="bottom" id="TDj-gD-Q7c"/>
+                                                <constraint firstItem="UU1-jb-Oee" firstAttribute="top" secondItem="ASP-bu-fsA" secondAttribute="top" id="XMr-t9-1wP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleDescription" destination="FdN-lt-vda" id="rlK-qp-rI3"/>
+                                            <outlet property="articleImage" destination="Z3M-6h-2Lo" id="eFu-zb-GKa"/>
+                                            <outlet property="author" destination="hrk-3N-LVh" id="NCE-yV-YSv"/>
+                                            <outlet property="publishedAt" destination="5Br-3N-ckm" id="NM6-qD-eTh"/>
+                                            <outlet property="source" destination="Xho-H1-a9y" id="Lxz-O4-GSx"/>
+                                            <outlet property="title" destination="Sle-d3-6Ca" id="Iq1-Nh-h0a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jC4-Zf-PPB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k0R-gI-cvg" firstAttribute="top" secondItem="jC4-Zf-PPB" secondAttribute="top" id="Ef2-3g-yF1"/>
+                            <constraint firstItem="jC4-Zf-PPB" firstAttribute="bottom" secondItem="k0R-gI-cvg" secondAttribute="bottom" id="IHt-Ym-hST"/>
+                            <constraint firstItem="k0R-gI-cvg" firstAttribute="leading" secondItem="jC4-Zf-PPB" secondAttribute="leading" id="P96-hn-cgQ"/>
+                            <constraint firstItem="jC4-Zf-PPB" firstAttribute="trailing" secondItem="k0R-gI-cvg" secondAttribute="trailing" id="Qms-Nv-7Is"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="p44-Ag-vXk"/>
+                    <connections>
+                        <outlet property="articleView" destination="k0R-gI-cvg" id="zDy-fn-aTk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFs-8E-I8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="-1085"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="NtP-Y5-IpQ">
+            <objects>
+                <viewController id="0Tq-nY-dx1" customClass="ArticleViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CsA-1I-YBw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LyI-CT-ts1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerTableViewCellIdentifier" id="hQE-AB-yqU" customClass="HeaderTableViewCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hQE-AB-yqU" id="ZIs-Jy-x5J">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5aZ-aL-GAE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KA-8S-YzC">
+                                                            <rect key="frame" x="15" y="15" width="389" height="20"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="source">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="20" name="Courier-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" paragraphSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMJ-o1-7YL">
+                                                            <rect key="frame" x="15" y="55" width="46" height="19"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="author">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="Monaco"/>
+                                                                        <font key="NSOriginalFont" size="16" name="Monaco"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-Od-0wm">
+                                                            <rect key="frame" x="161" y="55" width="243" height="19"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="publishedAt">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name="Monaco"/>
+                                                                        <font key="NSOriginalFont" size="16" name="Monaco"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="FMJ-o1-7YL" secondAttribute="bottom" constant="17" id="7nR-Ib-EbK"/>
+                                                        <constraint firstAttribute="bottom" secondItem="c3G-Od-0wm" secondAttribute="bottom" constant="17" id="DrH-2I-swW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="c3G-Od-0wm" secondAttribute="trailing" constant="10" id="KnW-Ea-LFe"/>
+                                                        <constraint firstItem="FMJ-o1-7YL" firstAttribute="leading" secondItem="5aZ-aL-GAE" secondAttribute="leading" constant="15" id="Lrw-bl-VpZ"/>
+                                                        <constraint firstItem="2KA-8S-YzC" firstAttribute="top" secondItem="5aZ-aL-GAE" secondAttribute="top" constant="15" id="NAU-s9-Q8l"/>
+                                                        <constraint firstItem="2KA-8S-YzC" firstAttribute="leading" secondItem="5aZ-aL-GAE" secondAttribute="leading" constant="15" id="VvH-CS-hh2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2KA-8S-YzC" secondAttribute="trailing" constant="10" id="nhU-jC-dUv"/>
+                                                        <constraint firstItem="c3G-Od-0wm" firstAttribute="leading" secondItem="FMJ-o1-7YL" secondAttribute="trailing" constant="100" id="vFB-5Y-dAh"/>
+                                                        <constraint firstItem="FMJ-o1-7YL" firstAttribute="top" secondItem="2KA-8S-YzC" secondAttribute="bottom" constant="20" id="yDC-wA-b2c"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5aZ-aL-GAE" firstAttribute="top" secondItem="ZIs-Jy-x5J" secondAttribute="top" id="GCg-Ik-nBp"/>
+                                                <constraint firstItem="5aZ-aL-GAE" firstAttribute="leading" secondItem="ZIs-Jy-x5J" secondAttribute="leading" id="KBx-dp-BDr"/>
+                                                <constraint firstAttribute="bottom" secondItem="5aZ-aL-GAE" secondAttribute="bottom" id="Uod-SF-Szy"/>
+                                                <constraint firstAttribute="trailing" secondItem="5aZ-aL-GAE" secondAttribute="trailing" id="diN-Id-Yz3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="author" destination="FMJ-o1-7YL" id="gJ7-gk-oBs"/>
+                                            <outlet property="publishedAt" destination="c3G-Od-0wm" id="ObK-wo-MSM"/>
+                                            <outlet property="source" destination="2KA-8S-YzC" id="dAo-SN-U4E"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageTableViewCellIdentifier" id="vRq-jt-YpU" customClass="ImageTableViewCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="119" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRq-jt-YpU" id="oMS-9u-isN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SEH-QL-Dea">
+                                                    <rect key="frame" x="5" y="0.0" width="404" height="44"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="SEH-QL-Dea" secondAttribute="bottom" id="8aG-1l-tda"/>
+                                                <constraint firstItem="SEH-QL-Dea" firstAttribute="leading" secondItem="oMS-9u-isN" secondAttribute="leading" constant="5" id="9Qm-NG-quq"/>
+                                                <constraint firstItem="SEH-QL-Dea" firstAttribute="top" secondItem="oMS-9u-isN" secondAttribute="top" id="ZIW-X4-gQF"/>
+                                                <constraint firstAttribute="trailing" secondItem="SEH-QL-Dea" secondAttribute="trailing" constant="5" id="hG3-Pp-YgQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="SEH-QL-Dea" id="f0w-XZ-4AI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentTableViewCellIdentifier" id="9gt-Fv-VEs" customClass="ContentTableViewCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="163" width="414" height="49.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9gt-Fv-VEs" id="no8-pu-dbl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Km-3J-tC1">
+                                                    <rect key="frame" x="15" y="0.0" width="399" height="49.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-Ld-Y3t">
+                                                            <rect key="frame" x="0.0" y="0.0" width="399" height="17"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Title">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="17" name="Courier-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbu-kj-lCL">
+                                                            <rect key="frame" x="0.0" y="27" width="399" height="22.5"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="description">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="19" name="Monaco"/>
+                                                                        <font key="NSOriginalFont" size="15" name="Courier-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Km-3J-tC1" firstAttribute="leading" secondItem="no8-pu-dbl" secondAttribute="leading" constant="15" id="ABY-Ch-sb7"/>
+                                                <constraint firstItem="0Km-3J-tC1" firstAttribute="top" secondItem="no8-pu-dbl" secondAttribute="top" id="bZr-VZ-goO"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Km-3J-tC1" secondAttribute="trailing" id="oUv-vk-sg1"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Km-3J-tC1" secondAttribute="bottom" id="we3-Sd-r6N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="rbu-kj-lCL" id="Dsd-uT-40O"/>
+                                            <outlet property="title" destination="KAj-Ld-Y3t" id="pQS-XN-GgE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d4d-ta-9p2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LyI-CT-ts1" firstAttribute="leading" secondItem="d4d-ta-9p2" secondAttribute="leading" id="GlK-vn-KlH"/>
+                            <constraint firstItem="d4d-ta-9p2" firstAttribute="bottom" secondItem="LyI-CT-ts1" secondAttribute="bottom" id="pqo-OW-X7v"/>
+                            <constraint firstItem="d4d-ta-9p2" firstAttribute="trailing" secondItem="LyI-CT-ts1" secondAttribute="trailing" id="ssn-dB-jfH"/>
+                            <constraint firstItem="LyI-CT-ts1" firstAttribute="top" secondItem="d4d-ta-9p2" secondAttribute="top" id="yIh-Je-SMA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X1I-xq-ZOT"/>
+                    <connections>
+                        <outlet property="articleTableView" destination="LyI-CT-ts1" id="tek-dZ-pYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUe-zE-BAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zd7-wJ-Q06">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z71-Ox-ipR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EBA-9n-D4Y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lz3-NO-eod">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BjK-SR-hjj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHf-0L-bl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
