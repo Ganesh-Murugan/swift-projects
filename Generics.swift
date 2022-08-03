@@ -89,3 +89,78 @@ bookStack.push(Book(bookName: "newBook"))
 print(bookStack)
 bookStack.pop()
 print(bookStack)
+
+
+
+
+import Foundation
+struct Person {
+    let name = "Ganesh"
+    var message: String {
+        print("the message is")
+        return "hi"
+    }
+    let hideMessage = false
+}
+
+let person = Person()
+// func printMessage(_ message: String) {
+//     if !person.hideMessage {
+//         print(message)
+//     }
+// }
+func printMessage(_ message: @autoclosure () -> String) {
+    
+    if !person.hideMessage {
+        print(message())
+    }
+}
+
+printMessage(person.message)
+
+
+// var closure: (()->Void)?
+
+// func getCode(completion: @escaping (()->Void)) {
+//     // let code = "15171"
+//     closure = completion
+// }
+
+// getCode() {
+    
+// }
+
+
+// let queue = DispatchQueue(label: "String", attributes: .concurrent)
+
+// func getInfo(closure: @escaping (String)-> Void) -> String {
+//     let info = "this is a closure example"
+//             queue.async {
+//                 closure(info)
+//                }
+//     return "func returned"
+// }
+
+// func showInfo() {
+//     getInfo { info in
+//                 print(info)
+//     }
+// }
+
+// print(showInfo())
+
+
+
+// func messageResponse(_ response: @escaping (String) -> Void) {
+//     print("Hey, how are you?")
+    
+//     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//         response("Hi, I'm doing really good.")
+//     }
+  
+//     print("Responding takes a while...")
+// }
+
+// messageResponse { friendResponse in
+//     print(friendResponse)
+// }
