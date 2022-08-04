@@ -164,3 +164,135 @@ printMessage(person.message)
 // messageResponse { friendResponse in
 //     print(friendResponse)
 // }
+
+
+
+///////////////////////
+import Foundation
+
+extension Double {
+    mutating func sqaure() {
+        self = self * self
+    }
+}
+
+var val = 1.5
+val.sqaure()
+print(val)
+
+extension String {
+    subscript (i: Int) -> Character {
+        return self[index(startIndex, offsetBy: i)]
+    }
+}
+let str = "hello"
+print(str[1])
+
+extension Int {
+    enum IntType {
+        case positive
+        case negative
+        case zero
+    }
+    var type: IntType {
+        switch self {
+            case 0: 
+                return IntType.zero
+            case let value where value > 0 : 
+                return IntType.positive
+            default: 
+                return IntType.negative
+        }
+    }
+}
+
+print(0.type)
+
+
+protocol PersonProtocol {
+    init(code: Int)
+}
+class Person: PersonProtocol {
+    var name: String = ""
+    var code: Int 
+
+    required init(code: Int) {
+        self.code = code
+    }
+}
+class Student: Person {
+    
+}
+
+let person1 = Person(code: 10)
+
+let student1 = Student(code: 1)
+print(student1.code)
+
+
+protocol Default {
+    static var defaultValue: Self { get }
+}
+
+extension Optional where Wrapped: Default {
+
+    var unwrap: Wrapped {
+        switch self {
+        case .none:
+            return Wrapped.defaultValue
+        case .some(let wrapped):
+            return wrapped
+        }
+    }
+}
+
+extension Int: Default {
+    static var defaultValue: Int {
+        0
+    }
+}
+
+extension String: Default {
+    static var defaultValue: String {
+        "0"
+    }
+}
+
+var optionalVal: String? = "cats"
+
+print(optionalVal.unwrap)
+
+
+
+protocol Some {
+    func someFunc() 
+}
+extension Some{
+    func someFunc() {
+        print("some")
+    }
+}
+
+struct Test: Some {
+//     func someFunc() {
+//         print("instruct")
+// }
+}
+
+
+Test().someFunc()
+
+
+
+// protocol One {
+//     var one: String {get}
+// }
+
+// protocol Two: One {
+//     var two: String {get}
+// }
+
+// struct one: Two{
+    
+// }
+
